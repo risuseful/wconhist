@@ -119,7 +119,7 @@ with open('wconhist_bm.txt', 'w') as f:
 # / 
  
 # WCONHIST 
-# 'A-01' STOP GRAT 2* 0.0 2* 131.08 1* / 
-# 'A-02' STOP GRAT 2* 0.0 2* 217.91 1* / 
-# 'A-03' OPEN GRAT 2* 3000.0 2* 50.21 1* / 
+# 'WL-01' STOP GRAT 2* 0.0 2* 131.08 1* / 
+# 'WL-05' STOP GRAT 2* 0.0 2* 217.91 1* / 
+# 'WL-12' OPEN GRAT 2* 3000.0 2* 50.21 1* / 
 # / 
