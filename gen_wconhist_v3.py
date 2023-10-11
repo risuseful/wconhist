@@ -67,7 +67,7 @@ query = query + " where t1.Date > '2008-01-01' and left(t1.Well,2) like 'BM%' "
 query = query + " 	and t1.Well NOT IN ('BMA-21', 'BMA-22', 'BMA-15', 'BMA-16', 'BMD-05', 'BMD-09', 'BMD-10') order by Date"
 
 # list online wells
-conn = pyodbc.connect(driver='SQL Server', server='hq-prismdb-02', user='akmal', password='akmal', database='Datamining')
+conn = pyodbc.connect(driver='***', server='***', user='***', password='***', database='****')
 cursor = conn.cursor()
 bm = pd.read_sql_query(query, conn)
 
