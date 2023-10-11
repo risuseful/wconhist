@@ -67,7 +67,7 @@ query = query + " where t1.Date > '2008-01-01' and left(t1.Well,2) like 'BM%' "
 query = query + " 	and t1.Well NOT IN ('BMA-21', 'BMA-22', 'BMA-15', 'BMA-16', 'BMD-05', 'BMD-09', 'BMD-10') order by Date"
 
 # list online wells
-conn = pyodbc.connect(driver='******', server='**-******-**', user='******', password='******', database='******')
+conn = pyodbc.connect(driver='SQL Server', server='hq-prismdb-02', user='akmal', password='akmal', database='Datamining')
 cursor = conn.cursor()
 bm = pd.read_sql_query(query, conn)
 
@@ -166,4 +166,44 @@ with open('wconhist_bm2.txt', 'w') as f:
         f.write('/ \n') # end this WCONHIST section
         
         
-
+# Note: sample results in 'wconhist_bm.txt'
+#
+# DATES 
+# 2 Mar 2022 / 
+# / 
+ 
+# WCONHIST 
+# 'BMA-01' STOP GRAT 2* 0.0 2* 165.08 1* / 
+# 'BMA-02' STOP GRAT 2* 0.0 2* 222.91 1* / 
+# 'BMA-03' OPEN GRAT 2* 2916.0 2* 231.21 1* / 
+# 'BMA-04' OPEN GRAT 2* 7207.0 2* 228.28 1* / 
+# 'BMA-05' OPEN GRAT 2* 8155.0 2* 241.66 1* / 
+# 'BMA-06' OPEN GRAT 2* 29.0 2* 321.0 1* / 
+# 'BMA-07' STOP GRAT 2* 0.0 2* 95.73 1* / 
+# 'BMA-08' OPEN GRAT 2* 10.0 2* 423.54 1* / 
+# 'BMA-09' STOP GRAT 2* 0.0 2* 195.22 1* / 
+# 'BMA-10' OPEN GRAT 2* 6597.0 2* 253.07 1* / 
+# 'BMA-11' OPEN GRAT 2* 5857.0 2* 245.27 1* / 
+# 'BMA-12' OPEN GRAT 2* 11501.0 2* 241.85 1* / 
+# 'BMA-13' OPEN GRAT 2* 7694.0 2* 241.25 1* / 
+# 'BMA-14' OPEN GRAT 2* 5756.0 2* 256.97 1* / 
+# 'BMA-17' STOP GRAT 2* 0.0 2* 470.92 1* / 
+# 'BMA-18' OPEN GRAT 2* 6497.0 2* 228.65 1* / 
+# 'BMA-19' OPEN GRAT 2* 4439.0 2* 239.42 1* / 
+# 'BMA-20' OPEN GRAT 2* 12206.0 2* 235.62 1* / 
+# 'BMB-01' OPEN GRAT 2* 3967.0 2* 254.33 1* / 
+# 'BMB-02' OPEN GRAT 2* 5942.0 2* 253.34 1* / 
+# 'BMB-03' OPEN GRAT 2* 56.0 2* 188.58 1* / 
+# 'BMB-04' OPEN GRAT 2* 56.0 2* 889.53 1* / 
+# 'BMB-05' OPEN GRAT 2* 6742.0 2* 282.76 1* / 
+# 'BMB-06' OPEN GRAT 2* 9661.0 2* 269.72 1* / 
+# 'BMB-07' OPEN GRAT 2* 4626.0 2* 259.44 1* / 
+# 'BMD-01' OPEN GRAT 2* 10040.0 2* 281.14 1* / 
+# 'BMD-02' STOP GRAT 2* 0.0 2* 297.37 1* / 
+# 'BMD-03' OPEN GRAT 2* 6991.0 2* 258.99 1* / 
+# 'BMD-04' OPEN GRAT 2* 10808.0 2* 281.77 1* / 
+# 'BMD-05' STOP GRAT 2* 0.0 2* 256.55 1* / 
+# 'BMD-06' STOP GRAT 2* 0.0 2* 306.5 1* / 
+# 'BMD-07' STOP GRAT 2* 0.0 2* 306.35 1* / 
+# 'BMD-08' STOP GRAT 2* 0.0 2* 163.12 1* / 
+# / 
